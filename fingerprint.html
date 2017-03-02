@@ -1,0 +1,30 @@
+<html>
+	<head>
+
+	</head>
+	<body>
+		<header>
+			<h1>FingerPrint</h1>
+		</header>
+
+		<main>
+			<p>
+				Your FingerPrint is:
+			</p>
+			<h2 id="exit"></h2>
+		</main>
+
+		<footer>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fingerprintjs2/1.5.0/fingerprint2.min.js"></script>
+			<script type="text/javascript">
+			new Fingerprint2().get(function(result, components){
+			  
+				document.getElementById('exit').innerHTML = result;
+
+			  	console.log(result);
+			  	console.log(components);
+			});
+		</script>
+		</footer>
+	</body>
+</html>
